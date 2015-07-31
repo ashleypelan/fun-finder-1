@@ -2,6 +2,9 @@ extends layout
 
 block content
   h1 Events
-  for title in events
-    h1= title
+  for info in events
+    for title in info
+      h1= title
+    for description in info
+      p= description
   
