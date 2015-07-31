@@ -1,7 +1,7 @@
 var express = require('express');
 var router = express.Router();
-var unirest = require('unirest');
 
+var categories = require('./../lib/javascripts/categories.js');
 
 
 /* GET home page. */
@@ -14,11 +14,8 @@ router.get('/events', function (req, res, next) {
 });
 
 router.post('/events', function (req, res, next) {
-  var category = 'outdoors_recreation'
-  var response = [];
-    unirest.get('http://api.eventful.com/json/events/search?app_key=' + process.env.EVENTFUL_KEY + '&keywords=' + category + '&location=Denver&date=Future', function (data) {
-      console.log(data.body[1]);
-      res.render('index', {info: JSON.stringify(data)})
+  categories.outdoors(function (titles) {
+    res.render('events', {events: titles});
   });
 });
 
