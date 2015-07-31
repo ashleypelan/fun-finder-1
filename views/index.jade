@@ -1,5 +1,24 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  h1.funFinderTitle Fun Finder
+  form(method="get" action="/events")
+    label(for="outdoors") Outdoors
+      img(src="../images/outdoors.jpeg")
+      input(type="checkbox" name="outdoors" id="outdoors")
+    p
+    label(for="nightLife") Night Life
+      img(src="../images/outdoors.jpeg")
+      input(type="checkbox" name="nightLife" id="nightLife")
+    p
+    label(for="arts") Arts
+      img(src="../images/outdoors.jpeg")
+      input(type="checkbox" name="arts" id="arts")
+    p
+    label(for="family") Family
+      img(src="../images/outdoors.jpeg")
+      input(type="checkbox" name="family" id="family")
+    p
+    label(for="free") Free
+      img(src="../images/outdoors.jpeg")
+      input(type="checkbox" name="free" id="free")
