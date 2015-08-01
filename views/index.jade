@@ -2,7 +2,7 @@ extends layout
 
 block content
   h1.funFinderTitle Fun Finder
-  form(method="post" action="/events")
+  form(method="get" action="/events")
     label(for="outdoors") Outdoors
       img(src="../images/outdoors.jpeg")
       input(type="checkbox" name="outdoors" id="outdoors")

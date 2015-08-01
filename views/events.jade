@@ -2,9 +2,9 @@ extends layout
 
 block content
   h1 Events
-  for info in events
-    for title in info
-      h1= title
-    for description in info
-      p= description
-  
+  //- for info in events
+  //-   for title in info
+  //-     h1= title
+  //-   for description in info
+  //-     p= description
+  p.hidden #{events}
