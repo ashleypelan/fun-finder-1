@@ -2,7 +2,7 @@ var data = JSON.parse(document.getElementsByClassName('hidden')[0].innerHTML);
 var events = data;
 var title = document.getElementsByClassName('title')[0];
 var description = document.getElementsByClassName('description')[0];
-var exploreButton = document.getElementById('explore');
+var exploreButton = document.getElementById('button grad transition');
 var len = events.length;
 var duplicateCheck = [];
 
@@ -17,6 +17,7 @@ var randomizer = function (events, len) {
       trigger ++;
     }
   }
+
   if(trigger === 0) {
     trigger = 0;
     duplicateCheck.push(num);
