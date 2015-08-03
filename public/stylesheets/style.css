@@ -1,6 +1,9 @@
 body {
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+  background: #B7C3F3;
+  /*background-color: #C2C1C2;*/
+  /*background: 30% #3d3d47;*/
 }
 
 a {
@@ -9,4 +12,175 @@ a {
 
 .hidden {
   visibility: hidden;
+}
+
+.funFinderTitle {
+  font-size: 100px;
+  font-family: sans-serif;
+  text-align: center;
+  color: #4F6272;
+}
+
+.all {
+  margin-top: 400px;
+  margin-left: 90px;
+  }
+
+.outdoorsPic {
+  opacity: 0.75;
+  filter: alpha(opacity=40);
+  border: 9px solid #B7C3F3;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  top: 400px;
+  left: 100px;
+  float: left;
+}
+
+.outdoorsPic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 9px solid #EF8E16;
+}
+
+.nightLifePic {
+  opacity: .75;
+  filter: alpha(opacity=40);
+  border: 9px solid #B7C3F3;
+  display: inline-block;
+  border-radius: 20px;
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+  /*margin-top: 50px;
+  margin-left: 620px;*/
+}
+
+.nightLifePic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 9px solid #EF8E16;
+}
+
+.artsPic {
+  opacity: .75;
+  filter: alpha(opacity=40);
+  border: 9px solid #B7C3F3;
+  border-radius: 20px;
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+}
+
+.artsPic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 9px solid #EF8E16;
+}
+
+.familyPic {
+  opacity: .75;
+  filter: alpha(opacity=40);
+  border: 9px solid #B7C3F3;
+  border-radius: 20px;
+  text-align: center;
+  float: left;
+  margin-left: 16px;
+}
+
+.familyPic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 9px solid #EF8E16;
+}
+
+.freePic {
+  opacity: .75;
+  filter: alpha(opacity=40);
+  border: 9px solid #B7C3F3;
+  border-radius: 20px;
+  float: left;
+  margin-left: 16px;
+}
+
+.freePic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 9px solid #EF8E16;
+}
+
+label {
+  font-family: Helvetica;
+  font-size: 90px;
+  font-style: normal;
+  font-weight: 400;
+  color: #FEFEFF;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  background: #404E5C;
+  /*background: #49C6E5;*/
+}
+
+.button{
+  position:relative;
+  display:inline-block;
+  margin-left: 45%;
+  top: 400px;
+}
+
+.button button{
+  color:white;
+  font-family:Helvetica, sans-serif;
+  font-weight:bold;
+  font-size:36px;
+  text-align: center;
+  text-decoration:none;
+  background-color:#FFA12B;
+  display:block;
+  position:relative;
+  padding:20px 40px;
+
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  text-shadow: 0px 1px 0px #000;
+  filter: dropshadow(color=#000, offx=0px, offy=1px);
+
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+
+.button button:active{
+  top:10px;
+  background-color:#F78900;
+
+  -webkit-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+  -moz-box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3pxpx 0 #915100;
+  box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.button:after{
+  content:"";
+  height:100%;
+  width:100%;
+  padding:4px;
+  position: absolute;
+  bottom:-15px;
+  left:-4px;
+  z-index:-1;
+  background-color:#2B1800;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }

@@ -1,27 +1,29 @@
 extends layout
 
 block content
-  h1.funFinderTitle Fun Finder
+  h1.funFinderTitle Fun Finder Denver
   form(method="get" action="/events")
-    label(for="outdoors") Outdoors
-      img(src="../images/outdoors.jpeg")
-      input(type="checkbox" name="outdoors" id="outdoors")
-    p
-    label(for="nightLife") Night Life
-      img(src="../images/outdoors.jpeg")
-      input(type="checkbox" name="nightLife" id="nightLife")
-    p
-    label(for="arts") Arts
-      img(src="../images/outdoors.jpeg")
-      input(type="checkbox" name="arts" id="arts")
-    p
-    label(for="family") Family
-      img(src="../images/outdoors.jpeg")
-      input(type="checkbox" name="family" id="family")
-    p
-    label(for="free") Free
-      img(src="../images/outdoors.jpeg")
-      input(type="checkbox" name="free" id="free")
-    p.hidden #{info}
-    button(type="submit") Explore
-    
+    div.all
+      div.outdoorsPic(style="height:400px; width:500px; background:url(../images/outdoors.jpeg)")
+        label.outdoorsWord(for="outdoors") Outdoors
+        input(type="checkbox" name="outdoors" id="outdoors" hidden)
+      p
+      div.nightLifePic(style="height:400px; width:500px; background:url(../images/nightlife.jpeg)")
+        label.nightLifeWord(for="nightLife") Night Life 
+        input(type="checkbox" name="nightLife" id="nightLife" hidden)
+      p
+      div.artsPic(style="height:400px; width:500px; background:url(../images/arts.jpeg)")
+        label.artsWord(for="arts") Arts
+        input(type="checkbox" name="arts" id="arts" hidden)
+      p
+      div.familyPic(style="height:400px; width:500px; background:url(../images/familyFun.jpeg)")
+        label.familyWord(for="family") Family
+        input(type="checkbox" name="family" id="family" hidden)
+      p
+      div.freePic(style="height:400px; width:500px; background:url(../images/free.png)")
+        label.freeWord(for="free")
+        input(type="checkbox" name="free" id="free" hidden)
+      p.hidden #{info}
+      div(ontouchstart="")
+    div.button
+      button(type="submit" id="button grad transition") Explore!
