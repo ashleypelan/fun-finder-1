@@ -14,9 +14,9 @@ a {
   visibility: hidden;
 }
 
-.funFinderTitle {
-  font-size: 100px;
-  font-family: sans-serif;
+h1 {
+  font-size: 120px;
+  /*font-family: sans-serif;*/
   text-align: center;
   color: #4F6272;
 }
