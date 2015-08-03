@@ -23,7 +23,7 @@ var randomizer = function (events, len) {
     var specificEvent = events[randomInterest].categories[randomCat];
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
-  } else {
+  } else  {
     console.log(trigger);
     trigger = 0;
     randomizer(events, len);
