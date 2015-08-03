@@ -1,51 +1,54 @@
 extends layout
 
 block content
+  header
+    .container
+      .title
+        h1
+          span.char1 D
+          span.char2 e
+          span.char3 n
+          span.char4 v
+          span.char5 e
+          span.char6 r
+          span.char7 
+          span.char8 F
+          span.char9 u
+          span.char10 n
+          span.char11 
+          span.char12 F
+          span.char13 i
+          span.char14 n
+          span.char15 d
+          span.char16 e
+          span.char17 r
+  form(method="post" action="/events")
   .container
-    .title
-      h1
-        span.char1 D
-        span.char2 e
-        span.char3 n
-        span.char4 v
-        span.char5 e
-        span.char6 r
-        span.char7 
-        span.char8 F
-        span.char9 u
-        span.char10 n
-        span.char11 
-        span.char12 F
-        span.char13 i
-        span.char14 n
-        span.char15 d
-        span.char16 e
-        span.char17 r
-    
-  form(method="get" action="/events")
-    div.all
-      div.outdoorsPic
-        label.label(for="outdoors") Outdoors
-        input(type="checkbox" name="outdoors" id="outdoors" hidden)
-      p
-      div.nightLifePic
-        label.label(for="nightLife") Night Life 
-        input(type="checkbox" name="nightLife" id="nightLife" hidden)
-      p
-      div.artsPic
-        label.label(for="arts") Arts
-        input(type="checkbox" name="arts" id="arts" hidden)
-      p
-      div.familyPic
-        label.label(for="family") Family
-        input(type="checkbox" name="family" id="family" hidden)
-      p
-      div.freePic
-        label.label(for="free")
-        input(type="checkbox" name="free" id="free" hidden)
-    .row
-      p Select your categories!
-      p.hidden #{info}
-      div(ontouchstart="")
-    div.button
-      button(type="submit" id="button grad transition") Explore!
+    main
+      form(method="get" action="/events")
+        div.all
+          div.outdoorsPic
+            label.label(for="outdoors") Outdoors
+            input(type="checkbox" name="outdoors" id="outdoors" hidden)
+          p
+          div.nightLifePic
+            label.label(for="nightLife") Night Life 
+            input(type="checkbox" name="nightLife" id="nightLife" hidden)
+          p
+          div.artsPic
+            label.label(for="arts") Arts
+            input(type="checkbox" name="arts" id="arts" hidden)
+          p
+          div.familyPic
+            label.label(for="family") Family
+            input(type="checkbox" name="family" id="family" hidden)
+          p
+          div.freePic
+            label.label(for="free")
+            input(type="checkbox" name="free" id="free" hidden)
+        .row
+          p Select your categories!
+          p.hidden #{info}
+          div(ontouchstart="")
+        div.button
+          button(type="submit" id="button grad transition") Explore!
