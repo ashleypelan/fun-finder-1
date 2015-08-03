@@ -1,28 +1,50 @@
 extends layout
 
 block content
-  h1.funFinderTitle Fun Finder Denver
+  .container
+    .title
+      h1
+        span.char1 D
+        span.char2 e
+        span.char3 n
+        span.char4 v
+        span.char5 e
+        span.char6 r
+        span.char7 
+        span.char8 F
+        span.char9 u
+        span.char10 n
+        span.char11 
+        span.char12 F
+        span.char13 i
+        span.char14 n
+        span.char15 d
+        span.char16 e
+        span.char17 r
+    
   form(method="get" action="/events")
     div.all
-      div.outdoorsPic(style="height:400px; width:500px; background:url(../images/outdoors.jpeg)")
-        label.outdoorsWord(for="outdoors") Outdoors
+      div.outdoorsPic
+        label.label(for="outdoors") Outdoors
         input(type="checkbox" name="outdoors" id="outdoors" hidden)
       p
-      div.nightLifePic(style="height:400px; width:500px; background:url(../images/nightlife.jpeg)")
-        label.nightLifeWord(for="nightLife") Night Life 
+      div.nightLifePic
+        label.label(for="nightLife") Night Life 
         input(type="checkbox" name="nightLife" id="nightLife" hidden)
       p
-      div.artsPic(style="height:400px; width:500px; background:url(../images/arts.jpeg)")
-        label.artsWord(for="arts") Arts
+      div.artsPic
+        label.label(for="arts") Arts
         input(type="checkbox" name="arts" id="arts" hidden)
       p
-      div.familyPic(style="height:400px; width:500px; background:url(../images/familyFun.jpeg)")
-        label.familyWord(for="family") Family
+      div.familyPic
+        label.label(for="family") Family
         input(type="checkbox" name="family" id="family" hidden)
       p
-      div.freePic(style="height:400px; width:500px; background:url(../images/free.png)")
-        label.freeWord(for="free")
+      div.freePic
+        label.label(for="free")
         input(type="checkbox" name="free" id="free" hidden)
+    .row
+      p Select your categories!
       p.hidden #{info}
       div(ontouchstart="")
     div.button
