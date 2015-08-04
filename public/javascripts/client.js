@@ -13,6 +13,7 @@ all.addEventListener("click", function(e){
     }
   }
 })
+<<<<<<< HEAD
 
 // first.addEventListener('click', function(){
 //   if(first.parentNode.style.opacity === "" ){
@@ -133,3 +134,5 @@ all.addEventListener("click", function(e){
 //   fifth.parentNode.style.opacity = "";
 // }
 // });
+=======
+>>>>>>> 39419cca945aff7d6df30651b6254ddc055539ee
