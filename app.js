@@ -8,7 +8,7 @@ require('dotenv').load();
 var routes = require('./routes/index');
 var users = require('./routes/users');
 var cookieSession = require('cookie-session');
-
+require("date-format-lite");
 var app = express();
 
 // view engine setup
