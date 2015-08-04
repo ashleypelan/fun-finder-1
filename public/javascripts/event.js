@@ -6,10 +6,12 @@ var startTime = document.getElementsByClassName('start-time')[0];
 var venueAddress = document.getElementsByClassName('venue-address')[0];
 var latitude = document.getElementsByClassName('latitude')[0];
 var longitude = document.getElementsByClassName('longitude')[0];
-var mainImage = document.getElementsByClassName('main-image')[0];
+// var mainImage = document.getElementsByClassName('main-image')[0];
+var website = document.getElementsByClassName('website')[0];
 var exploreButton = document.getElementById('button grad transition');
 var len = events.length;
 var duplicateCheck = [];
+var favs = {};
 
 var randomizer = function (events, len) {
   var randomInterest = Math.floor(Math.random() * len);
@@ -33,8 +35,14 @@ var randomizer = function (events, len) {
     venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + 'Denver, CO' + '</br>';
     latitude.innerHTML = specificEvent.latitude[randomEvent];
     longitude.innerHTML = specificEvent.longitude[randomEvent];
-    mainImage.innerHTML = specificEvent.image.url[randomEvent];
+    website.href = specificEvent.website[randomEvent];
+    website.innerHTML = specificEvent.titles[randomEvent];
+    // mainImage.style = 'background-image:' + specificEvent.mainImage[randomEvent].medium.url + ';';
 
+
+    favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
+                time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]};
+    // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);
 
@@ -50,8 +58,13 @@ var randomizer = function (events, len) {
           title: 'Hello World!'
       });
     }
-
-google.maps.event.addDomListener(window, 'load', initialize);
+    if(duplicateCheck.length ===1) {
+      google.maps.event.addDomListener(window, 'load', initialize);
+      return favs;
+    } else {
+      google.maps.event.addDomListener(exploreButton, 'click', initialize);
+      return favs;
+    }
 
   } else  {
     console.log(trigger);
