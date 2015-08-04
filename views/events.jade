@@ -6,12 +6,10 @@ block content
       h2.title
       .date-section
         p
-        h3 Monday, July 20, 2015 @ #{start-time} to #{stop-time}
+        h3.start-time Date
         br
         br
-      .category-section
-        //- p #{category}
-        p Nightlife
+        p 
       br
       br
       .main-image
@@ -26,17 +24,17 @@ block content
       .map
         img(src='../images/demo-map.jpg')
       
-      p.address #{venue-address}
-        br
-        | Denver, CO 81301
-        br
-        br
-        | Sunday, July 20, 2015 @ 6:00pm
-        br
-        br 
-      
+      p.venue-address 
+        
   div.button.event
     button(id="button grad transition") Explore
+<<<<<<< HEAD
+  br
+  p.hidden #{events}
+  div.heart
+  h2 Click the heart to like/unlike
+  div.heart ❤
+=======
     br
     p.hidden #{events}
     
@@ -47,3 +45,4 @@ block content
     
     
 //
+>>>>>>> 94eea47d13330326d0302aa5ea3c9cc2bae8f4d2

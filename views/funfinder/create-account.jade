@@ -1,0 +1,40 @@
+extends ../layout
+
+block content
+  header
+    .container
+      .title
+        h1 Denver Fun Finder
+        if user
+          .logout
+            a(href='/logout') Logout
+  main
+      if errors
+        .container
+          ul
+            each error in errors
+              li= error
+      .container
+        .form
+          form(method="post" action="/create-account")
+            .row
+              .label
+                label(for="username") Username
+              .input
+                if data
+                  input(type="text" name="username" id="username" value=data.username)
+                else
+                  input(type="text" name="username" id="username")
+            .row
+              .label
+                label(for="password") Password
+              .input
+                input(type="password" name="password" id="password")
+            .row
+              .label
+                label(for="confirm") Confirm Password
+              .input
+                input(type="password" name="confirm" id="confirm")
+            .row
+              .input
+                input(type="submit" value="Create Account")
