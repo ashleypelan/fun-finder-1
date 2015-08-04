@@ -11,9 +11,8 @@ router.get('/', function(req, res, next) {
 });
 
 router.post('/favorites', function(req, res, next){
-  console.log(req.session)
   var info = (JSON.parse(req.body.data));
-  console.log(info.title);
+  mongo.insertFav(req, info);
 })
 // Events Page
 router.get('/events', function (req, res, next) {
