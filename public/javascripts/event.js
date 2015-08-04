@@ -35,4 +35,4 @@ randomizer(events, len);
 
 exploreButton.addEventListener('click', function () {
   randomizer(events, len);
-})
+});
