@@ -14,8 +14,6 @@ block content
       br
       .main-image
       p.description
-      //- else 
-      //-   p Sorry, no description is available for this event. 
       br
       br
       p For more information, www.somewebsite.com.
@@ -23,33 +21,20 @@ block content
       button(id='save-fav') ❤ Save This Event
       #map-canvas
         //- img(src='../images/demo-map.jpg')
-
       p.venue-address 
         br
-        | Denver, CO 81301
+        | Denver, Colorado
         br
         br
         | Sunday, July 20, 2015 @ 6:00pm
         br
         br 
       p.venue-address 
-
   .row-button
     div.button.event
       button(id="button grad transition") Explore
-
-
   br
   p.hidden #{events} 
-  
-  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?').   
-  script(type='text/javascript').
-    function initialize() {
-      var mapOptions = {
-        center: { lat: -34.900, lng: 150.644},
-        zoom: 8
-      };
-      var map = new google.maps.Map(document.getElementById('map-canvas'),
-      mapOptions);
-    }
-    google.maps.event.addDomListener(window, 'load', initialize); 
+  p.hidden(class="latitude")
+  p.hidden(class="longitude")
+     
