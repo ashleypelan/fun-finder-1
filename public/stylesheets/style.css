@@ -4,7 +4,6 @@
   box-sizing: border-box;
 }
 
-
 html {
   background: #404E5C;
   margin: 0;
@@ -20,7 +19,6 @@ body {
 header {
   height: auto;
 }
-
 
 a {
   color: #00B7FF;
@@ -63,12 +61,13 @@ h1 {
 
 }
 
-.row-button {
+.row .button {
   margin: 0 auto;
   width: 100%;
   text-align: center;
   margin-top: -60px;
 }
+
 .create {
   width: 30%;
   text-align: right;
@@ -152,6 +151,7 @@ h1 span {
 .char17 { transform: rotate(96deg); }
 
 .button{
+  margin-top: 175px;
   position:relative;
   display:inline-block;
   top: 120px;
@@ -159,7 +159,7 @@ h1 span {
   /*margin-bottom: px;*/
 }
 
-.button button{
+.button button, .row .button{
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
@@ -185,7 +185,7 @@ h1 span {
   border-radius: 5px;
 }
 
-.button button:active{
+.button button:active, .row .button:active{
   top:10px;
   background-color:#F78900;
   outline: none;
@@ -195,7 +195,7 @@ h1 span {
   box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
 
-.button:after{
+.button:after, .row .button:after{
   content:"";
   height:100%;
   width:100%;
