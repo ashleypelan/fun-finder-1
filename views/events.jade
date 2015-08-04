@@ -19,23 +19,22 @@ block content
       p For more information, www.somewebsite.com.
     .columns-4
       button(id='save-fav') ❤ Save This Event
-      .map
-        img(src='../images/demo-map.jpg')
-
+      #map-canvas
+        //- img(src='../images/demo-map.jpg')
       p.venue-address 
         br
-        | Denver, CO 81301
+        | Denver, Colorado
         br
         br
         | Sunday, July 20, 2015 @ 6:00pm
         br
         br 
       p.venue-address 
-
   .row-button
     div.button.event
       button(id="button grad transition") Explore
-
-
   br
-  p.hidden #{events}
+  p.hidden #{events} 
+  p.hidden(class="latitude")
+  p.hidden(class="longitude")
+     

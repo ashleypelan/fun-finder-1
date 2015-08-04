@@ -30,45 +30,44 @@ router.get('/logout', function(req, res, next){
 })
 
 router.get('/login', function (req, res, next) {
-  res.render('funfinder/login')
-})
+  res.render('funfinder/login');
+});
 
 router.post('/login', function(req, res, next){
   var errors = [];
   if(req.body.username === ""){
-    errors.push("Username cannot be left blank")
+    errors.push("Username cannot be left blank");
   }
   if(req.body.password === ""){
-    errors.push("Password cannot be left blank")
+    errors.push("Password cannot be left blank");
   }
   if(errors.length === 0){
     req.body.username = req.body.username.toLowerCase();
     mongo.login(req.body, res, req).then(function(){
-
-    })
+    });
   }
   else {
-    res.render('funfinder/login', {errors: errors, data: req.body})
+    res.render('funfinder/login', {errors: errors, data: req.body});
   }
-})
+});
 
 router.get('/create-account', function(req, res, next) {
-  res.render('funfinder/create-account')
-})
+  res.render('funfinder/create-account');
+});
 
 router.post('/create-account', function(req, res, next) {
   var errors = [];
   if(req.body.username === ""){
-    errors.push("Username cannot be left blank")
+    errors.push("Username cannot be left blank");
   }
   if(req.body.password === ""){
-    errors.push("Password cannot be left blank")
+    errors.push("Password cannot be left blank");
   }
   if(req.body.confirm === ""){
-    errors.push("You must confirm your password")
+    errors.push("You must confirm your password");
   }
   if(req.body.password.length < 6){
-    errors.push("Your password must be at least 6 characters long")
+    errors.push("Your password must be at least 6 characters long");
   }
   if(req.body.password != req.body.confirm){
     errors.push("Your passwords do not match, please re-enter them carefully")
@@ -79,6 +78,6 @@ router.post('/create-account', function(req, res, next) {
   } else {
     res.render('funfinder/create-account', {errors: errors, data: req.body})
   }
-})
+});
 
 module.exports = router;
