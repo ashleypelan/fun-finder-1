@@ -1,8 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 html {
   background: #404E5C;
@@ -20,12 +15,15 @@ header {
   height: auto;
 }
 
+
 a {
   color: #00B7FF;
 }
 
 .hidden {
   visibility: hidden;
+  overflow: hidden;
+  height: 0px;
 }
 
 .title {
@@ -61,13 +59,12 @@ h1 {
 
 }
 
-.row .button {
+.row-button {
   margin: 0 auto;
   width: 100%;
   text-align: center;
   margin-top: -60px;
 }
-
 .create {
   width: 30%;
   text-align: right;
@@ -151,7 +148,6 @@ h1 span {
 .char17 { transform: rotate(96deg); }
 
 .button{
-  margin-top: 175px;
   position:relative;
   display:inline-block;
   top: 120px;
@@ -159,7 +155,7 @@ h1 span {
   /*margin-bottom: px;*/
 }
 
-.button button, .row .button{
+.button button{
   color:white;
   font-family:Helvetica, sans-serif;
   font-weight:bold;
@@ -185,7 +181,7 @@ h1 span {
   border-radius: 5px;
 }
 
-.button button:active, .row .button:active{
+.button button:active{
   top:10px;
   background-color:#F78900;
   outline: none;
@@ -195,7 +191,7 @@ h1 span {
   box-shadow:inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
 }
 
-.button:after, .row .button:after{
+.button:after{
   content:"";
   height:100%;
   width:100%;
