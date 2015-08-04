@@ -4,51 +4,52 @@ block content
   header
     .container
       .title
-        h1
-          span.char1 D
-          span.char2 e
-          span.char3 n
-          span.char4 v
-          span.char5 e
-          span.char6 r
-          span.char7 
-          span.char8 F
-          span.char9 u
-          span.char10 n
-          span.char11 
-          span.char12 F
-          span.char13 i
-          span.char14 n
-          span.char15 d
-          span.char16 e
-          span.char17 r
-  form(method="post" action="/events")
-  .container
-    main
-      form(method="get" action="/events")
-        div.all
-          div.outdoorsPic
-            label.label(for="outdoors") Outdoors
-            input(type="checkbox" name="outdoors" id="outdoors" hidden)
-          p
-          div.nightLifePic
-            label.label(for="nightLife") Night Life 
-            input(type="checkbox" name="nightLife" id="nightLife" hidden)
-          p
-          div.artsPic
-            label.label(for="arts") Arts
-            input(type="checkbox" name="arts" id="arts" hidden)
-          p
-          div.familyPic
-            label.label(for="family") Family
-            input(type="checkbox" name="family" id="family" hidden)
-          p
-          div.freePic
-            label.label(for="free")
-            input(type="checkbox" name="free" id="free" hidden)
-        .row
-          p Select your categories!
-          p.hidden #{info}
-          div(ontouchstart="")
-        div.button
-          button(type="submit" id="button grad transition") Explore!
+        h1 Denver Fun Finder
+        form(method="post" action="/events")
+    .container
+      .login-create
+        if user
+          p Hello #{user}
+          a(href="/logout") Logout
+        else
+          .login
+            a(href="/login") Login
+          .create
+            a(href="/create-account") Create Account
+  main
+      .container
+        .form
+          form(method="get" action="/events")
+            .row
+              .category(style='background-image: url(/images/outdoors.jpeg); background-size: cover;')
+                .label
+                  label(for="outdoors") Outdoors
+                .input
+                  input(type="checkbox" name="outdoors" id="outdoors" hidden)
+              .category(style='background-image: url(/images/nightlife.jpeg); background-size: cover;')
+                .label
+                  label(for="nightLife") Night Life 
+                .input
+                  input(type="checkbox" name="nightLife" id="nightLife" hidden)
+              .category(style='background-image: url(/images/arts.jpeg); background-size: cover;')
+                .label
+                  label(for="arts") Arts
+                .input
+                  input(type="checkbox" name="arts" id="arts" hidden)
+              .category(style='background-image: url(/images/familyFun.jpeg); background-size: cover;')
+                .label
+                  label(for="family") Family
+                .input
+                  input(type="checkbox" name="family" id="family" hidden)
+              .category(style='background-image: url(/images/free.png); background-size: cover;')
+                .label
+                  label(for="free") Free
+                .input 
+                  input(type="checkbox" name="free" id="free" hidden)
+            .row
+              p Select your categories!
+              p.hidden #{info}
+              div(ontouchstart="")
+            .row-button
+              div.button
+                button(type="submit" id="button grad transition") Explore!
