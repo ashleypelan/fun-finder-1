@@ -36,12 +36,13 @@ router.post('/login', function(req, res, next){
     errors.push("Password cannot be left blank")
   }
   if(errors.length === 0){
+    req.body.username = req.body.username.toLowerCase();
     mongo.login(req.body, res, req).then(function(){
 
     })
   }
   else {
-    res.render('funfinder/login', {errors: errors})
+    res.render('funfinder/login', {errors: errors, data: req.body})
   }
 })
 
@@ -67,10 +68,8 @@ router.post('/create-account', function(req, res, next) {
     errors.push("Your passwords do not match, please re-enter them carefully")
   }
   if(errors.length === 0){
-    mongo.newAccount(req.body).then(function(){
-      req.session.username = req.body.username
-      res.redirect('/');
-    })
+    req.body.username = req.body.username.toLowerCase();
+    mongo.newAccount(req.body, res, req);
   } else {
     res.render('funfinder/create-account', {errors: errors, data: req.body})
   }
