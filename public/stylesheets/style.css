@@ -1,23 +1,21 @@
-<<<<<<< HEAD
-
-=======
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
->>>>>>> 0c5652d9b265950af841389850f28f7ab91453c5
 
 html {
   background: #404E5C;
   margin: 0;
   padding: 0;
+  height: 100%;
 }
 
 body {
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
   background: #B7C3F3;
   margin: 0;
+  height: 100%;
 }
 
 header {
@@ -31,6 +29,7 @@ a {
 
 .hidden {
   visibility: hidden;
+  height: 0px;
 }
 
 .title {
@@ -123,6 +122,11 @@ h1 {
 
 .row p {
   margin: 0 0;
+}
+
+.row-hidden {
+  max-height: 0px;
+  overflow: hidden;
 }
 
 
