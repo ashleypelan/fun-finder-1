@@ -1,14 +1,57 @@
 extends layout
 
 block content
-  h2.title
-  br
-  p.description
-  br
-  div.button
+  .event-content
+    .columns-8
+      h2.title
+      .date-section
+        p
+        h3 Monday, July 20, 2015 @ #{start-time} to #{stop-time}
+        br
+        br
+      .category-section
+        //- p #{category}
+        p Nightlife
+      br
+      br
+      .main-image
+      p.description
+      br
+      br
+      p For more information, www.somewebsite.com.
+      
+    .columns-4
+      button(id='save-fav') ❤ Save This Event
+      
+      .map
+        img(src='../images/demo-map.jpg')
+      
+      p.address #{venue-address}
+        br
+        | Denver, CO 81301
+        br
+        br
+        | Sunday, July 20, 2015 @ 6:00pm
+        br
+        br 
+      
+  div.button.event
     button(id="button grad transition") Explore
+<<<<<<< HEAD
   br
   p.hidden #{events}
   div.heart
   h2 Click the heart to like/unlike
   div.heart ❤
+=======
+    br
+    p.hidden #{events}
+    
+    
+    
+    
+    
+    
+    
+//
+>>>>>>> 94eea47d13330326d0302aa5ea3c9cc2bae8f4d2
