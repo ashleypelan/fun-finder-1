@@ -14,13 +14,15 @@ block content
       br
       .main-image
       p.description
+      //- else 
+      //-   p Sorry, no description is available for this event. 
       br
       br
       p For more information, www.somewebsite.com.
     .columns-4
       button(id='save-fav') ❤ Save This Event
-      .map
-        img(src='../images/demo-map.jpg')
+      #map-canvas
+        //- img(src='../images/demo-map.jpg')
 
       p.venue-address 
         br
@@ -36,27 +38,16 @@ block content
       button(id="button grad transition") Explore
 
   br
-  p.hidden #{events}
-    |     
-    script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?')
-    |     
-    script(type='text/javascript').
-      function initialize() {
+  p.hidden #{events} 
+  
+  script(type='text/javascript', src='https://maps.googleapis.com/maps/api/js?').   
+  script(type='text/javascript').
+    function initialize() {
       var mapOptions = {
-      center: { lat: -34.397, lng: 150.644},
-      zoom: 8
+        center: { lat: -34.900, lng: 150.644},
+        zoom: 8
       };
       var map = new google.maps.Map(document.getElementById('map-canvas'),
       mapOptions);
-      }
-      google.maps.event.addDomListener(window, 'load', initialize);</body></html>
-
-
-
-    
-    
-    
-    
-    
-=======
->>>>>>> 1af0f8ba0c32c8c1ec3995768c5df2dc02234ba9
+    }
+    google.maps.event.addDomListener(window, 'load', initialize); 

@@ -65,11 +65,13 @@ h1 {
   text-align: center;
   margin-top: -60px;
 }
+
 .create {
   width: 30%;
   text-align: right;
   display: inline-block;
 }
+
 .form {
   width: 100%;
   height: auto;
@@ -88,6 +90,8 @@ h1 {
   background-color: blue;
   margin-left: 5px;
   margin-right: 5px;
+  background-size: cover;
+  background-position: center;
 }
 
 .category:hover {
@@ -294,8 +298,9 @@ h1 span {
   border-radius: 5px;
 }
 
-.map img {
+#map-canvas {
   width: 86%;
+  height: 350px;
   margin: 2% 7% 10%;
   border: 3px solid white;
 }
