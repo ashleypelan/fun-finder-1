@@ -98,6 +98,28 @@ h1 {
   border: 5px solid #EF8E16;
 }
 
+<<<<<<< HEAD
+.freePic {
+  opacity: .75;
+  filter: alpha(opacity=40);
+  border: 5px solid #B7C3F3;
+  border-radius: 10px;
+  float: left;
+  margin-left: 16px;
+  height: 190px;
+  width: 220px;
+  background: url(../images/free-v2.png);
+  background-size: cover;
+  background-position: center;
+}
+
+.freePic:hover {
+  opacity: 1.0;
+  filter: alpha(opacity=100);
+  border: 5px solid #EF8E16;
+}
+=======
+>>>>>>> 4798759d4b87a233a498e631c30d5bcf92fc07d0
 
 .label {
   font-family: Helvetica;

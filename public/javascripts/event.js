@@ -3,7 +3,6 @@ var events = data;
 var title = document.getElementsByClassName('title')[0];
 var description = document.getElementsByClassName('description')[0];
 var startTime = document.getElementsByClassName('start-time')[0];
-var stopTime = document.getElementsByClassName('stop-time')[0];
 var venueAddress = document.getElementsByClassName('venue-address')[0];
 var exploreButton = document.getElementById('button grad transition');
 var len = events.length;
@@ -28,8 +27,7 @@ var randomizer = function (events, len) {
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
-    stopTime.innerHTML = specificEvent.stopTime[randomEvent];
-    venueAddress.innerHTML = specificEvent.venueAddress[randomEvent];
+    venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + 'Denver, CO' + '</br>';
   } else  {
     console.log(trigger);
     trigger = 0;
