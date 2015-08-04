@@ -7,6 +7,7 @@ var venueAddress = document.getElementsByClassName('venue-address')[0];
 var exploreButton = document.getElementById('button grad transition');
 var len = events.length;
 var duplicateCheck = [];
+var favs = {};
 
 var randomizer = function (events, len) {
   var randomInterest = Math.floor(Math.random() * len);
@@ -28,6 +29,10 @@ var randomizer = function (events, len) {
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
     venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + 'Denver, CO' + '</br>';
+    favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
+                time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]};
+    return favs;
+
   } else  {
     console.log(trigger);
     trigger = 0;

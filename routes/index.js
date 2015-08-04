@@ -9,6 +9,12 @@ router.get('/', function(req, res, next) {
 
   res.render('index', {user: req.session.username});
 });
+
+router.post('/favorites', function(req, res, next){
+  console.log(req.session)
+  var info = (JSON.parse(req.body.data));
+  console.log(info.title);
+})
 // Events Page
 router.get('/events', function (req, res, next) {
   console.log(req.query);
