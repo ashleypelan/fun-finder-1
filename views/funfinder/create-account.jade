@@ -15,9 +15,9 @@ block content
             each error in errors
               li= error
       .container
-        .form
+        .formCreate
           form(method="post" action="/create-account")
-            .row
+            .rowCreate
               .label
                 label.username(for="username") Username
               .input
@@ -25,12 +25,12 @@ block content
                   input.usernameInput(type="text" name="username" id="username" value=data.username)
                 else
                   input(type="text" name="username" id="username")
-            .row
+            .rowCreate
               .label
                 label.password(for="password") Password
               .input
                 input.passwordInput(type="password" name="password" id="password")
-            .row
+            .rowCreate
               .label
                 label.confirm(for="confirm") Confirm Password
               .input
