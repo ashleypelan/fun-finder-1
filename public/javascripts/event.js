@@ -43,7 +43,7 @@ var randomizer = function (events, len) {
 
     console.log(typeof specificEvent.website[randomEvent]);
     console.log(specificEvent.venueAddress[randomEvent])
-    favs = {title: specificEvent.titles[randomEvent], description:   specificEvent.description[randomEvent],
+    favs = {title: specificEvent.titles[randomEvent], description:   specificEvent.description[randomEvent].replace("http://","" ).replace("www", ""),
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
             category: category};
     // Google Maps

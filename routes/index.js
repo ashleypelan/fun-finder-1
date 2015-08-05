@@ -21,7 +21,6 @@ router.get('/favorites', function (req, res, next) {
     mongo.findEvents().then(function(events){
       mongo.findMe(req).then(function(profile){
         mongo.findMeInEvents(profile).then(function(profile){
-          console.log(profile);
           res.render('favorites', {user: req.session.username, profile: profile, events: events})
         })
       });
@@ -34,6 +33,7 @@ router.get('/favorites', function (req, res, next) {
 
 router.post('/favorites', function(req, res, next){
   var info = (JSON.parse(req.body.data));
+  console.log(info + ">>>>>>>>>>>>>>> post");
   mongo.insertFav(req, info);
 })
 // Events Page
@@ -100,22 +100,6 @@ router.post('/create-account', function(req, res, next) {
     res.render('funfinder/create-account', {errors: errors, data: req.body})
   }
 });
-
-router.get('/favorites', function(req, res, next) {
-    if(req.session.username){
-
-      mongo.findEvents().then(function(events){
-        mongo.findMe(req).then(function(profile){
-          mongo.findMeInEvents(profile).then(function(profile){
-            console.log(profile);
-            res.render('favorites', {user: req.session.username, profile: profile, events: events})
-          })
-        });
-      })
-    } else {
-      res.redirect('/');
-    }
-})
 
 router.post('/remove/:id', function(req, res, next){
   mongo.removeFavorite(req).then(function(){

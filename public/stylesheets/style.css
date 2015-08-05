@@ -91,6 +91,12 @@ h1 {
   width: 80%;
 }
 
+main .container {
+  margin: 0 auto;
+  width: 80%;
+  background-color: rgba(255, 255, 255, 0.25);
+}
+
 .containerLogin {
   margin: 0 auto;
   width: 80%;
@@ -340,7 +346,10 @@ h1 span {
   position: relative;
 }
 
-/*********/
+.fav-content #fav-login {
+  margin-bottom: 4%;
+}
+
 .fav-row:nth-child(even) {
   background-color: rgba(255, 255, 255, 0.25);
 }
@@ -372,7 +381,7 @@ h1 span {
 
 .columns-2 {
   width: 18%;
-  margin: 10px 2% 0 0;
+  margin: 30px 2% 0 0;
   padding: 4px 0 0 2%;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -393,7 +402,7 @@ h1 span {
   background-color: firebrick;
   display: block;
   float: right;
-  margin-top: -45px;
+  margin-top: -25px;
   padding: 5px;
   width: 80%;
 
@@ -410,7 +419,7 @@ h1 span {
   border-radius: 5px;
 }
 
-#seventy-five { display: inline-block; width: 75%; margin-top: -10px;}
+#seventy-five { display: inline-block; width: 75%; margin-top: -5px;}
 #twenty-five { display: inline-block; width: 25%; }
 
 .fav.columns-4 button#save-fav {
@@ -418,7 +427,10 @@ h1 span {
   margin: 40px auto 50px;
   padding: 15px 25px;
   font-size: 2em;
+}
 
+.fav.columns-4 p {
+  margin: 5%;
 }
 
 .fav.columns-4 a {
@@ -458,6 +470,10 @@ a {
   position: relative;
   padding-bottom: 30px;
   font-size: 28px;
+}
+
+.labelCity {
+  font-size: 26px;
 }
 
 .username, .usernameInput, .password, .passwordInput, .confirm, .confirmInput, .formCreate {
