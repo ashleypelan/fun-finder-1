@@ -10,9 +10,9 @@ block content
       .login-create
         if user
           p Hello, #{user.username}
-          a(href="/profile") My Profile
+          a.myProfile(href="/profile") My Profile
           p
-          a(href="/logout") Logout
+          a.logoutHome(href="/logout") Logout
         else
           .login
             a(href="/login") Login
