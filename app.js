@@ -27,8 +27,10 @@ app.use(cookieSession({
 keys: [process.env.KEY1, process.env.KEY2]
 }))
 
+
 app.use('/', routes);
 app.use('/users', users);
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

@@ -4,9 +4,6 @@ if(document.getElementById('save-fav')) {
     var data = 'data=' + JSON.stringify(favs);
     var xhr = new XMLHttpRequest;
     xhr.open('post', '/favorites', true);
-    xhr.addEventListener('load', function () {
-      console.log('helloYo');
-    })
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(data);
   })
