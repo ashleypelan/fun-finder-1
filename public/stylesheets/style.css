@@ -162,6 +162,10 @@ h1 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
+.event-content h3 {
+  color: #404E5C;
+}
+
 .row .label {
   /*margin-top: 100px;*/
 }
