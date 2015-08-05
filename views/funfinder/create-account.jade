@@ -4,7 +4,7 @@ block content
   header
     .container
       .title
-        h1 Denver Fun Finder
+        h1.createTitle Denver Fun Finder
         if user
           .logout
             a(href='/logout') Logout
@@ -36,7 +36,7 @@ block content
               .input
                 input(type="password" name="confirm" id="confirm")
             .row
-              .input
-                input(type="submit" value="Create Account")
+              .button
+                button(type="submit" value="Create Account") Create Account
                 p
-            a(href="/")<<< Back
+            a.back(href="/")<<< Home
