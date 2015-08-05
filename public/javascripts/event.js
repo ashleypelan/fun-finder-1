@@ -25,10 +25,10 @@ var randomizer = function (events, len) {
       trigger ++;
     }
   }
+  var specificEvent = events[randomInterest].categories[randomCat];
 
-  if(trigger === 0) {
+  if(trigger === 0 && specificEvent.titles[randomEvent]) {
     duplicateCheck.push(num);
-
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
@@ -45,7 +45,7 @@ var randomizer = function (events, len) {
     console.log(specificEvent.venueAddress[randomEvent])
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
-            category: category, website: specificEvent.website[randomEvent].toString()};
+            category: category};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);
