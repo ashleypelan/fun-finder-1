@@ -351,12 +351,28 @@ a {
   font-size: 28px;
 }
 
-.username, .usernameInput, .password, .passwordInput, .confirm, .confirmInput, .form{
+.username, .usernameInput, .password, .passwordInput, .confirm, .confirmInput, .formCreate {
   /*display: inline-block;*/
   /*margin-top: -180px;*/
 
 }
 
-.password, .passwordInput {
+.rowCreate {
+  margin-top: 50px;
+  text-align: center;
+}
+
+.rowLogin {
+  margin-top: 50px;
+  text-align: center;
+  padding-bottom: 53px;
+}
+
+.loginButton {
+  padding-bottom: none;
+}
+
+.backLogin {
+  margin-left: -85px;
 
 }
