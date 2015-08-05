@@ -19,7 +19,7 @@ header {
 
 p {
   color: #404E5C;
-  font-size: 20px;
+  /*font-size: 20px;*/
 }
 
 .venue-address, .date-section {
