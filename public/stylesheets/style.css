@@ -3,7 +3,7 @@
 }
 
 html {
-  background: #404E5C;
+  /*background: #404E5C;*/
   /*margin-top: 50px;*/
 }
 
@@ -322,6 +322,7 @@ h1 span {
 
 .createTitle {
   font-size: 50px;
+  position: relative;
 }
 
 /*********/
@@ -423,9 +424,11 @@ h1 span {
 }
 
 .back {
-  padding-left: 20px;
-  bottom: 20px;
+  /*bottom: 20px;*/
   color: #0000CC;
+  display: inline-block;
+  margin-left: -85px;
+  margin-top: -100px;
 }
 
 a {
@@ -436,4 +439,13 @@ a {
   position: relative;
   padding-bottom: 30px;
   font-size: 28px;
+}
+
+.username, .usernameInput, .password, .passwordInput, .confirm, .confirmInput, .form{
+  display: inline-block;
+  margin-top: -180px;
+}
+
+.password, .passwordInput {
+  
 }
