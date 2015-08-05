@@ -442,10 +442,11 @@ a {
 }
 
 .username, .usernameInput, .password, .passwordInput, .confirm, .confirmInput, .form{
-  display: inline-block;
-  margin-top: -180px;
+  /*display: inline-block;*/
+  /*margin-top: -180px;*/
+
 }
 
 .password, .passwordInput {
-  
+
 }
