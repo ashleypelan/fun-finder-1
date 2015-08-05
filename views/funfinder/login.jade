@@ -17,7 +17,7 @@ block content
       .containerLogin
         .form
           form(method="post" action="/login")
-            .rowLogin
+            .rowCreate
               .label
                 label(for="username") Username
               .input
@@ -25,13 +25,13 @@ block content
                   input(type="text" name="username" id="username" value=data.username)
                 else
                   input(type="text" name="username" id="username")
-            .rowLogin
+            .rowCreate
               .label
                 label(for="password") Password
               .input
                 input(type="password" name="password" id="password")
-            .row
-              .button
+            .row-updated
+              .button-create
                 button.loginButton(type="submit" value="Login") Login
                 p
             a.back(href="/")<<< Back To Home
