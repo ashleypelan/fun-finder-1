@@ -27,12 +27,7 @@ var randomizer = function (events, len) {
   }
   var specificEvent = events[randomInterest].categories[randomCat];
 
-<<<<<<< HEAD
   if(trigger === 0 && specificEvent.titles[randomEvent]) {
-    // trigger = 0;
-=======
-  if(trigger === 0) {
->>>>>>> e9e9bdf7c05106450c8e2a2e17cc23d5b6c4affe
     duplicateCheck.push(num);
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
