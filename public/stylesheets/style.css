@@ -382,7 +382,7 @@ h1 span {
 
 .columns-2 {
   width: 18%;
-  margin: 10px 2% 0 0;
+  margin: 30px 2% 0 0;
   padding: 4px 0 0 2%;
   border-right: 1px solid rgba(255, 255, 255, 0.25);
 }
@@ -420,7 +420,7 @@ h1 span {
   border-radius: 5px;
 }
 
-#seventy-five { display: inline-block; width: 75%; margin-top: -10px;}
+#seventy-five { display: inline-block; width: 75%; margin-top: -5px;}
 #twenty-five { display: inline-block; width: 25%; }
 
 .fav.columns-4 button#save-fav {
