@@ -16,7 +16,7 @@ block content
       p.description
       br
       br
-      p For more information:
+      p For more information visit:
       a.website(href='')
     .columns-4
       button(id='save-fav') ❤ Save This Event
@@ -32,9 +32,10 @@ block content
         br 
       p.venue-address 
   .row-button
-    div.button.event
+    div.button
       button(id="button grad transition") Explore
   br
+  a(href="/" class="backButtonEvents")<<< Back To Home
   p.hidden #{events} 
   p.hidden(class="latitude")
   p.hidden(class="longitude")

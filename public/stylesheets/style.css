@@ -1,8 +1,6 @@
-
 html {
   background: #404E5C;
-  margin: 0;
-  padding: 0;
+  margin-top: 50px;
 }
 
 body {
@@ -15,6 +13,10 @@ header {
   height: auto;
 }
 
+p {
+  color: #404E5C;
+  font-size: 20px;
+}
 
 a {
   color: #00B7FF;
@@ -26,37 +28,59 @@ a {
   height: 0px;
 }
 
-.title {
-  margin:0 auto;
+.denverFun {
+  /*position: absolute;*/
   width: 100%;
   text-align: center;
+  font-family: helvetica;
+  color: #404E5C;
+  font-size: 65px;
+  /*z-index: 1000;*/
+  position: relative;
+}
+
+.title {
+  margin: 0 auto;
+  width: 100%;
+  text-align: center;
+  font-family: helvetica;
+  font-size: 43px;
+  color: #404E5C;
 }
 
 h1 {
+  color: #404E5C;
   margin: 0;
   padding: 0;
-  font-size: 5em;
   padding-top: 20px;
   padding-bottom: 20px;
 }
 
+.container .login-create {
+  /*padding-top: -400px;*/
+  display: inline-block;
+  position: absolute;
+}
+
 .container {
-  margin: 0 auto;
-  width: 80%%;
-  height: auto;
+  /*margin: 0 auto;
+  width: 80%;
+  height: auto;*/
 }
 
 .login-create {
   width: 40%;
   margin: 0 auto;
-  text-align: center
+  text-align: right;
+  padding-left: 800px;
+  display: inline-block;
+
 }
 
 .login {
   width: 30%;
-  text-align: center;
+  text-align: right;
   display: inline-block;
-
 }
 
 .row-button {
@@ -109,8 +133,8 @@ h1 {
   text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
 }
 
-
 .row {
+  margin-top: 100px;
   clear: both;
   text-align: center;
   padding-top: 25px;
@@ -122,7 +146,6 @@ h1 {
   margin: 0 0;
 }
 
-
 h1 span {
   font: 68px Monaco, MonoSpace;
   height: 400px;
@@ -133,30 +156,12 @@ h1 span {
   transform-origin: bottom center;
 }
 
-.char1 { transform: rotate(0deg); }
-.char2 { transform: rotate(6deg); }
-.char3 { transform: rotate(12deg); }
-.char4 { transform: rotate(18deg); }
-.char5 { transform: rotate(24deg); }
-.char6 { transform: rotate(30deg); }
-.char7 { transform: rotate(36deg); }
-.char8 { transform: rotate(42deg); }
-.char9 { transform: rotate(48deg); }
-.char10 { transform: rotate(54deg); }
-.char11 { transform: rotate(60deg); }
-.char12 { transform: rotate(66deg); }
-.char13 { transform: rotate(72deg); }
-.char14 { transform: rotate(78deg); }
-.char15 { transform: rotate(84deg); }
-.char16 { transform: rotate(90deg); }
-.char17 { transform: rotate(96deg); }
-
-.button{
-  position:relative;
-  display:inline-block;
+.button {
+  /*position: relative;*/
+  display: inline-block;
   top: 120px;
   outline: none;
-  /*margin-bottom: px;*/
+  margin-bottom: 79px;
 }
 
 .button button{
@@ -210,12 +215,9 @@ h1 span {
   border-radius: 5px;
 }
 
-
-
-/*************/
 .event-content {
   background-color: rgba(255, 255, 255, 0.15);
-  padding: 20px 10px 20px 20px;
+  padding: 25px 15px 25px 25px;
 }
 
 .columns-8, .columns-4 {
@@ -305,14 +307,14 @@ h1 span {
   border: 3px solid white;
 }
 
+.backButtonEvents {
+  padding-left: 25px;
+  color: #404E5C;
+  /*padding-bottom: 500px;*/
+  position: absolute;
+  bottom: 50px;
+}
 
-
-
-
-
-
-
-
-
-
-/**/
+a {
+  color: #2176FF;
+}

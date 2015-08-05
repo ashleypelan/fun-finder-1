@@ -4,7 +4,7 @@ block content
   header
     .container
       .title
-        h1 Denver Fun Finder
+        h1.denverFun Denver Fun Finder
         form(method="post" action="/events")
     .container
       .login-create
@@ -41,11 +41,6 @@ block content
                   label(for="family") Family
                 .input
                   input(type="checkbox" name="family" id="family" hidden)
-              .category(style='background-image: url(/images/free.png); background-size: cover;')
-                .label
-                  label.freePic(for="free") Free
-                .input 
-                  input(type="checkbox" name="free" id="free" hidden)
             .row
               p Select your categories!
               p.hidden #{info}
