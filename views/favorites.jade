@@ -6,7 +6,7 @@ block content
     .container
       .login-create
         if user
-          p Hello, #{user.username}
+          p Hello, #{user}
           a(href="/favorites") My Profile!
           p
           a(href="/logout") Logout
@@ -33,8 +33,10 @@ block content
               
       .fav.columns-4
           p.num-favs You have #{profile.length} saved events in Denver Fun Finder.
-          button(id='save-fav') 
-            a(href='/') Find More Events
+           
+          a(href='/')
+            button(id='save-fav') Hello
+              
           
                    
           
