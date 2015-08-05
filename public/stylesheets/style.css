@@ -291,16 +291,6 @@ h1 span {
   background-color: rgba(255, 255, 255, 0.25)
 }
 
-/*.main-image {
-  display: inline-block;
-  float: right;
-  margin: 2%;
-  width: 40%;
-  height: 200px;
-  background-color: lightgray;
-  border: 3px solid white;
-}*/
-
 .event-address {
   margin: 0 0 10% 5%;
 }
@@ -398,9 +388,9 @@ h1 span {
   background-color: firebrick;
   display: block;
   float: right;
-  margin-top: -15px;
+  margin-top: -45px;
   padding: 5px;
-  width: 15%;
+  width: 80%;
 
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   text-shadow: 0px 1px 0px #000;
@@ -415,23 +405,27 @@ h1 span {
   border-radius: 5px;
 }
 
+#seventy-five { display: inline-block; width: 75%; margin-top: -10px;}
+#twenty-five { display: inline-block; width: 25%; }
+
 .fav.columns-4 button#save-fav {
-  width: 100%;
+  width: 90%;
   margin: 40px auto 50px;
   padding: 15px 25px;
   font-size: 2em;
+
 }
 
-.fav.columns-4 button#save-fav a {
-  color: white;
+.fav.columns-4 a {
   text-decoration: none;
 }
 
-.columns-4 p.small a {
+a#view-all {
   display: block;
   font-size: 0.875em;
   color: black;
   text-align: center;
+  padding-bottom: 4%;
 }
 
 .backButtonEvents {
@@ -488,4 +482,13 @@ a {
 
 .back {
   margin-left: 10px;
+}
+
+a.myProfile {
+  padding-bottom: 10px;
+  padding-left: 5px;
+}
+
+.logoutHome {
+  padding-left: 5px;
 }

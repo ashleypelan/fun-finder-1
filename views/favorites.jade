@@ -1,6 +1,6 @@
 extends layout
 
-block content
+block content  
   .fav-content
     h1 Fun Finder
     .container
@@ -10,34 +10,33 @@ block content
           a(href="/favorites") My Profile!
           p
           a(href="/logout") Logout
-    .container
-      .fav.columns-8
-        h2 Username's Saved Events
-        
-        each event in profile
-          .fav-row
-            .columns-2
-              p=event.category
-              //- p=event.time
-            .columns-10
-              h4 
-                  p=event.title
-              p.start-time When: #{event.time}
-                
-                br
-                | Where: #{event.address}
-                
-                .remove-event
-                  form(action="/remove/" + event._id, method="post")
-                    button#delete(type="submit") Remove Event
+    
+    .fav.columns-8
+      h2 #{user}'s Saved Events
+      
+      each event in profile
+        .fav-row
+          .columns-2
+            p=event.category
+          .columns-10
+            h4 
+              p=event.title
               
-      .fav.columns-4
-          p.num-favs You have #{profile.length} saved events in Denver Fun Finder.
-           
-          a(href='/')
-            button(id='save-fav') Hello
+            p.start-time#seventy-five When: #{event.time}
               
-          
+              br
+              | Where: #{event.address}
+              br
+              a(href='') Event Link
+              .remove-event#twenty-five
+                form(action="/remove/" + event._id, method="post")
+                  button#delete(type="submit") Remove Event
+            
+    .fav.columns-4
+      p.num-favs You have #{profile.length} saved events in Denver Fun Finder.
+      
+      a(href='/') 
+        button(id='save-fav') Find More Events
                    
           
           

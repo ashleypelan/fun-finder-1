@@ -15,9 +15,9 @@ block content
       a.website(href='')
     .columns-4
       button(id='save-fav') ❤ &nbsp;Save This Event
-      p.small 
+      p
       if user
-        a(href='/favorites') View saved events
+        a#view-all(href='/favorites') View all your saved events.
       #map-canvas
       p.venue-address.event-address 
         br
