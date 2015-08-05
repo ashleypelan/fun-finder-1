@@ -27,13 +27,13 @@ var randomizer = function (events, len) {
   }
 
   if(trigger === 0) {
-    // trigger = 0;
     duplicateCheck.push(num);
     var specificEvent = events[randomInterest].categories[randomCat];
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
     venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + events[randomInterest].city + '</br>';
+    console.log(events[randomInterest].categories[randomCat]);
     latitude.innerHTML = specificEvent.latitude[randomEvent];
     longitude.innerHTML = specificEvent.longitude[randomEvent];
     website.href = specificEvent.website[randomEvent];
@@ -60,7 +60,7 @@ var randomizer = function (events, len) {
           title: 'Hello World!'
       });
     }
-    if(duplicateCheck.length ===1) {
+    if(duplicateCheck.length === 1) {
       google.maps.event.addDomListener(window, 'load', initialize);
       return favs;
     } else {
