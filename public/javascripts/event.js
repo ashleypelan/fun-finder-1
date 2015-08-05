@@ -15,12 +15,13 @@ var favs = {};
 
 var randomizer = function (events, len) {
   var randomInterest = Math.floor(Math.random() * len);
-  var randomCat = Math.floor(Math.random() * len);
+  var randomCat = Math.floor(Math.random() * 4);
   var randomEvent = Math.floor(Math.random() * 9);
   var num = String(randomInterest) + String(randomCat) + String(randomEvent);
   var trigger = 0;
   for (var i = 0; i < duplicateCheck.length; i++) {
     if(duplicateCheck[i] === num){
+      console.log(duplicateCheck[i], num);
       trigger ++;
     }
   }
