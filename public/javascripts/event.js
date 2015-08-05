@@ -33,6 +33,7 @@ var randomizer = function (events, len) {
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
     venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + events[randomInterest].city + '</br>';
+    console.log(events[randomInterest].categories[randomCat]);
     latitude.innerHTML = specificEvent.latitude[randomEvent];
     longitude.innerHTML = specificEvent.longitude[randomEvent];
     website.href = specificEvent.website[randomEvent];
@@ -41,7 +42,6 @@ var randomizer = function (events, len) {
 
     console.log(events[randomInterest].name);
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
-
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
             category: events[randomInterest].name};
     // Google Maps
