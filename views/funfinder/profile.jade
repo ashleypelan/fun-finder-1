@@ -1,0 +1,18 @@
+extends ../layout
+
+block content
+  header
+    .container
+      .title
+        h1 Denver Fun Finder
+        if user
+          .logout
+            a(href='/logout') Logout
+  main
+    .container
+      each event in profile
+        p=event.title
+          ul
+            li=event.time
+            li=event.address
+            li=event.description

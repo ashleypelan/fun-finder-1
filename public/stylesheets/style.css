@@ -56,29 +56,23 @@ h1 {
   padding-bottom: 20px;
 }
 
-.container .login-create {
-  /*padding-top: -400px;*/
-  display: inline-block;
-  position: absolute;
-}
+
 
 .container {
-  /*margin: 0 auto;
-  width: 80%;
-  height: auto;*/
+  margin: 0 auto;
+  width: 85%;
 }
 
 .login-create {
-  width: 40%;
+  width: 100%;
   margin: 0 auto;
   text-align: right;
-  padding-left: 800px;
   display: inline-block;
 
 }
 
 .login {
-  width: 30%;
+  width: 10%;
   text-align: right;
   display: inline-block;
 }
@@ -91,7 +85,7 @@ h1 {
 }
 
 .create {
-  width: 30%;
+  width: 10%;
   text-align: right;
   display: inline-block;
 }

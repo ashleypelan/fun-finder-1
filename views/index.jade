@@ -9,7 +9,9 @@ block content
     .container
       .login-create
         if user
-          p Hello, #{user}
+          p Hello, #{user.username}
+          a(href="/profile") My Profile!
+          p
           a(href="/logout") Logout
         else
           .login
