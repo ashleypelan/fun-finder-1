@@ -15,12 +15,13 @@ var favs = {};
 
 var randomizer = function (events, len) {
   var randomInterest = Math.floor(Math.random() * len);
-  var randomCat = Math.floor(Math.random() * len);
+  var randomCat = Math.floor(Math.random() * 4);
   var randomEvent = Math.floor(Math.random() * 9);
   var num = String(randomInterest) + String(randomCat) + String(randomEvent);
   var trigger = 0;
   for (var i = 0; i < duplicateCheck.length; i++) {
     if(duplicateCheck[i] === num){
+      console.log(duplicateCheck[i], num);
       trigger ++;
     }
   }
@@ -31,7 +32,7 @@ var randomizer = function (events, len) {
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
-    venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + 'Denver, CO' + '</br>';
+    venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + events[randomInterest].city + '</br>';
     latitude.innerHTML = specificEvent.latitude[randomEvent];
     longitude.innerHTML = specificEvent.longitude[randomEvent];
     website.href = specificEvent.website[randomEvent];
@@ -42,6 +43,8 @@ var randomizer = function (events, len) {
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
                 time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]};
 
+            time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]
+            category: specificEvent[randomInterest].name};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);

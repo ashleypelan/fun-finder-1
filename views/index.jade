@@ -4,12 +4,14 @@ block content
   header
     .container
       .title
-        h1 Denver Fun Finder
+        h1.denverFun Fun Finder
         form(method="post" action="/events")
     .container
       .login-create
         if user
-          p Hello, #{user}
+          p Hello, #{user.username}
+          a(href="/profile") My Profile!
+          p
           a(href="/logout") Logout
         else
           .login
@@ -21,6 +23,10 @@ block content
         .form
           form(method="get" action="/events")
             .row
+              .labelCity City / State
+                label(for='city')
+                .input
+                  input(type='text' id='city' name='city')
               .category(style='background-image: url(/images/outdoors.jpeg); background-size: cover;')
                 .label
                   label(for="outdoors") Outdoors
@@ -41,11 +47,6 @@ block content
                   label(for="family") Family
                 .input
                   input(type="checkbox" name="family" id="family" hidden)
-              .category(style='background-image: url(/images/free.png); background-size: cover;')
-                .label
-                  label.freePic(for="free") Free
-                .input 
-                  input(type="checkbox" name="free" id="free" hidden)
             .row
               p Select your categories!
               p.hidden #{info}
