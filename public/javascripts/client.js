@@ -6,7 +6,7 @@ if(document.getElementById('save-fav')) {
     xhr.open('post', '/favorites', true);
     xhr.addEventListener('load', function () {
       console.log('helloYo');
-    })
+    });
     xhr.setRequestHeader('Content-type', 'application/x-www-form-urlencoded');
     xhr.send(data);
   })
