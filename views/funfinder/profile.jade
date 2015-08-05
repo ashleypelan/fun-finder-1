@@ -5,14 +5,20 @@ block content
     .container
       .title
         h1 Denver Fun Finder
-        if user
-          .logout
-            a(href='/logout') Logout
+      if user
+        a(href="/") Go Explore!
+        p
+        a(href="/logout") Logout
+      
   main
     .container
       each event in profile
-        p=event.title
-          ul
-            li=event.time
-            li=event.address
-            li=event.description
+        .new-event
+          p=event.title
+            ul
+              li=event.time
+              li=event.address
+              li=event.description
+            .remove-event
+              form(action="/remove/" + event._id, method="post")
+                input(type="submit" value="Remove From Favorites")

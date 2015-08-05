@@ -101,6 +101,11 @@ router.get('/profile', function(req, res, next) {
     }
 })
 
+router.post('/remove/:id', function(req, res, next){
+  mongo.removeFavorite(req).then(function(){
+    res.redirect('/profile')
+  })
+})
 
 
 module.exports = router;
