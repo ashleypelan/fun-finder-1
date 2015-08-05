@@ -6,8 +6,11 @@ var mongo = require('../lib/javascripts/mongo.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-
   res.render('index', {user: req.session.username});
+});
+
+router.get('/favorites', function (req, res, next) {
+  res.render('favorites');
 });
 
 router.post('/favorites', function(req, res, next){
@@ -78,5 +81,6 @@ router.post('/create-account', function(req, res, next) {
     res.render('funfinder/create-account', {errors: errors, data: req.body})
   }
 });
+
 
 module.exports = router;

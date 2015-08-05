@@ -2,40 +2,29 @@ extends layout
 
 block content
   .event-content
+    h1 Denver Fun Finder
     .columns-8
       h2.title
-      .date-section
-        p
-        h3.start-time Date
-        br
-        br
-        p 
-      br
+      h3.start-time Date
       br
       //- .main-image
       p.description
       br
       br
-      p For more information:
+      p For more information, visit:
       a.website(href='')
     .columns-4
-      button(id='save-fav') ❤ Save This Event
+      button(id='save-fav') ❤ &nbsp;Save This Event
+      p.small 
+        a(href='/favorites') View all your saved events.
       #map-canvas
-        //- img(src='../images/demo-map.jpg')
-      p.venue-address 
+      p.venue-address.event-address 
         br
         | Denver, Colorado
-        br
-        br
-        | Sunday, July 20, 2015 @ 6:00pm
-        br
-        br 
-      p.venue-address 
+        
   .row-button
     div.button.event
       button(id="button grad transition") Explore
-  br
-  p.hidden #{events} 
-  p.hidden(class="latitude")
-  p.hidden(class="longitude")
+
+  p.hidden #{events}
      
