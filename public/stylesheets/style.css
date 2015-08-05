@@ -1,6 +1,6 @@
 html {
   background: #404E5C;
-  margin-top: 50px;
+  /*margin-top: 50px;*/
 }
 
 body {
@@ -62,6 +62,7 @@ h1 {
 
 .container .login-create {
   /*padding-top: -400px;*/
+  margin-top: -100px;
   display: inline-block;
   position: absolute;
 }
@@ -169,7 +170,7 @@ h1 span {
 }
 
 .button {
-  /*position: relative;*/
+  position: relative;
   display: inline-block;
   top: 120px;
   outline: none;
