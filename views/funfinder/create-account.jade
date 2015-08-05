@@ -14,7 +14,7 @@ block content
           ul
             each error in errors
               li= error
-      .container
+      .containerLogin
         .formCreate
           form(method="post" action="/create-account")
             .rowCreate
@@ -37,6 +37,6 @@ block content
                 input.confirmInput(type="password" name="confirm" id="confirm")
             .row
               .button
-                button(type="submit" value="Create Account") Create Account
+                button.loginButton(type="submit" value="Create Account") Create Account
                 p
             a.back(href="/")<<< Back To Home

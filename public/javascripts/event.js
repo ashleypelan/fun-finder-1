@@ -25,10 +25,10 @@ var randomizer = function (events, len) {
       trigger ++;
     }
   }
+  var specificEvent = events[randomInterest].categories[randomCat];
 
-  if(trigger === 0) {
+  if(trigger === 0 && specificEvent.titles[randomEvent]) {
     duplicateCheck.push(num);
-    var specificEvent = events[randomInterest].categories[randomCat];
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];

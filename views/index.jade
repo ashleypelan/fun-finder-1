@@ -23,10 +23,10 @@ block content
         .form
           form(method="get" action="/events")
             .row
-              .labelCity City or State
-                label(for='city')
+              .labelCity City / State
+                label(for='autocomplete')
                 .input
-                  input(type='text' id='city' name='city')
+                  input(type='text' id='autocomplete' name='city')
               .category(style='background-image: url(/images/outdoors.jpeg); background-size: cover;')
                 .label
                   label(for="outdoors") Outdoors
@@ -48,7 +48,7 @@ block content
                 .input
                   input(type="checkbox" name="family" id="family" hidden)
             .row
-              p Select your categories!
+              p.selecting Select your categories!
               p.hidden #{info}
               div(ontouchstart="")
             .row-button
