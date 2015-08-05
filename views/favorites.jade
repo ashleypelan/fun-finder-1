@@ -4,7 +4,7 @@ block content
   .fav-content
     h1 Fun Finder
     .container
-      .login-create
+      .login-create#fav-login
         if user
           p Hello, #{user}
           p
@@ -25,8 +25,8 @@ block content
               
               br
               | Where: #{event.address}
-              br
-              a(href='') Event Link
+              //- br
+              //- a(href='') Event Link
               .remove-event#twenty-five
                 form(action="/remove/" + event._id, method="post")
                   button#delete(type="submit") Remove Event
