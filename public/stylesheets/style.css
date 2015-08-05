@@ -142,7 +142,7 @@ h1 {
   background-color: blue;
   margin-left: 5px;
   margin-right: 5px;
-  margin-bottom: -120px;
+  margin-bottom: -100px;
   background-size: cover;
   background-position: center;
 }
@@ -163,7 +163,7 @@ h1 {
 }
 
 .row .label {
-  margin-top: 100px;
+  /*margin-top: 100px;*/
 }
 
 /*.row-button .button button {
