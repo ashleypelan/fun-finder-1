@@ -25,10 +25,10 @@ var randomizer = function (events, len) {
       trigger ++;
     }
   }
+  var specificEvent = events[randomInterest].categories[randomCat];
 
-  if(trigger === 0) {
+  if(trigger === 0 && specificEvent.titles[randomEvent]) {
     duplicateCheck.push(num);
-    var specificEvent = events[randomInterest].categories[randomCat];
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
@@ -38,12 +38,13 @@ var randomizer = function (events, len) {
     longitude.innerHTML = specificEvent.longitude[randomEvent];
     website.href = specificEvent.website[randomEvent];
     website.innerHTML = specificEvent.titles[randomEvent];
+    var category = events[randomInterest].name.charAt(0).toUpperCase() + events[randomInterest].name.slice(1);
     // mainImage.style = 'background-image:' + specificEvent.mainImage[randomEvent].medium.url + ';';
 
     console.log(events[randomInterest].name);
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
-            category: events[randomInterest].name};
+            category: category};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);

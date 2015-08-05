@@ -14,7 +14,7 @@ block content
           ul
             each error in errors
               li= error
-      .container
+      .containerLogin
         .form
           form(method="post" action="/login")
             .rowLogin
@@ -34,4 +34,4 @@ block content
               .button
                 button.loginButton(type="submit" value="Login") Login
                 p
-            a.backLogin(href="/")<<< Back To Home
+            a.back(href="/")<<< Back To Home
