@@ -64,11 +64,22 @@ h1 {
   padding-bottom: 20px;
 }
 
-.container .login-create {
-  margin-top: -90px;
+.container .login-create, .login {
+  margin-top: -100px;
   margin-left: 70px;
   position: relative;
   display: block;
+}
+
+.myProfile {
+  float: left;
+  margin-left: 1080px;
+  margin-top: .07px;
+}
+
+.logoutHome {
+  float: right;
+  margin-top: -.7px;
 }
 
 
