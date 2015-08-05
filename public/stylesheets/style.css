@@ -94,6 +94,7 @@ h1 {
 main .container {
   margin: 0 auto;
   width: 80%;
+  /*border-radius: 20px;*/
   background-color: rgba(255, 255, 255, 0.25);
 }
 
