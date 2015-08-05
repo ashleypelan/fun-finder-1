@@ -13,6 +13,22 @@ router.get('/', function(req, res, next) {
   } else {
     res.render('index');
   }
+});
+
+router.get('/favorites', function (req, res, next) {
+  if(req.session.username){
+
+    mongo.findEvents().then(function(events){
+      mongo.findMe(req).then(function(profile){
+        mongo.findMeInEvents(profile).then(function(profile){
+          console.log(profile);
+          res.render('favorites', {user: req.session.username, profile: profile, events: events})
+        })
+      });
+    })
+  } else {
+    res.redirect('/');
+  }
 
 });
 
@@ -85,14 +101,14 @@ router.post('/create-account', function(req, res, next) {
   }
 });
 
-router.get('/profile', function(req, res, next) {
+router.get('/favorites', function(req, res, next) {
     if(req.session.username){
 
       mongo.findEvents().then(function(events){
         mongo.findMe(req).then(function(profile){
           mongo.findMeInEvents(profile).then(function(profile){
             console.log(profile);
-            res.render('funfinder/profile', {user: req.session.username, profile: profile, events: events})
+            res.render('favorites', {user: req.session.username, profile: profile, events: events})
           })
         });
       })
@@ -103,9 +119,8 @@ router.get('/profile', function(req, res, next) {
 
 router.post('/remove/:id', function(req, res, next){
   mongo.removeFavorite(req).then(function(){
-    res.redirect('/profile')
+    res.redirect('/favorites')
   })
 })
-
 
 module.exports = router;

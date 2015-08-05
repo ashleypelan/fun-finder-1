@@ -10,9 +10,9 @@ block content
       .login-create
         if user
           p Hello, #{user.username}
-          a(href="/profile") My Profile!
+          a.myProfile(href="/favorites") My Profile!
           p
-          a(href="/logout") Logout
+          a.logoutHome(href="/logout") Logout
         else
           .login
             a(href="/login") Login
@@ -48,7 +48,7 @@ block content
                 .input
                   input(type="checkbox" name="family" id="family" hidden)
             .row
-              p Select your categories!
+              p.selecting Select your categories!
               p.hidden #{info}
               div(ontouchstart="")
             .row-button

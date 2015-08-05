@@ -27,23 +27,29 @@ var randomizer = function (events, len) {
   }
   var specificEvent = events[randomInterest].categories[randomCat];
 
+<<<<<<< HEAD
   if(trigger === 0 && specificEvent.titles[randomEvent]) {
     // trigger = 0;
+=======
+  if(trigger === 0) {
+>>>>>>> e9e9bdf7c05106450c8e2a2e17cc23d5b6c4affe
     duplicateCheck.push(num);
     title.innerHTML = specificEvent.titles[randomEvent];
     description.innerHTML = specificEvent.description[randomEvent];
     startTime.innerHTML = specificEvent.startTime[randomEvent];
     venueAddress.innerHTML = specificEvent.venueAddress[randomEvent] + '<br>' + events[randomInterest].city + '</br>';
+    console.log(events[randomInterest].categories[randomCat]);
     latitude.innerHTML = specificEvent.latitude[randomEvent];
     longitude.innerHTML = specificEvent.longitude[randomEvent];
     website.href = specificEvent.website[randomEvent];
     website.innerHTML = specificEvent.titles[randomEvent];
+    var category = events[randomInterest].name.charAt(0).toUpperCase() + events[randomInterest].name.slice(1);
     // mainImage.style = 'background-image:' + specificEvent.mainImage[randomEvent].medium.url + ';';
 
     console.log(events[randomInterest].name);
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
-            category: events[randomInterest].name};
+            category: category};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);
@@ -60,7 +66,7 @@ var randomizer = function (events, len) {
           title: 'Hello World!'
       });
     }
-    if(duplicateCheck.length ===1) {
+    if(duplicateCheck.length === 1) {
       google.maps.event.addDomListener(window, 'load', initialize);
       return favs;
     } else {

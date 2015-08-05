@@ -14,29 +14,29 @@ block content
           ul
             each error in errors
               li= error
-      .container
-        .form
+      .containerLogin
+        .formCreate
           form(method="post" action="/create-account")
-            .row
+            .rowCreate
               .label
-                label(for="username") Username
+                label.username(for="username") Username
               .input
                 if data
-                  input(type="text" name="username" id="username" value=data.username)
+                  input.usernameInput(type="text" name="username" id="username" value=data.username)
                 else
                   input(type="text" name="username" id="username")
-            .row
+            .rowCreate
               .label
-                label(for="password") Password
+                label.password(for="password") Password
               .input
-                input(type="password" name="password" id="password")
-            .row
+                input.passwordInput(type="password" name="password" id="password")
+            .rowCreate
               .label
-                label(for="confirm") Confirm Password
+                label.confirm(for="confirm") Confirm Password
               .input
-                input(type="password" name="confirm" id="confirm")
+                input.confirmInput(type="password" name="confirm" id="confirm")
             .row
               .button
-                button(type="submit" value="Create Account") Create Account
+                button.loginButton(type="submit" value="Create Account") Create Account
                 p
             a.back(href="/")<<< Back To Home
