@@ -4,7 +4,7 @@ block content
   header
     .container
       .title
-        h1.denverFun Denver Fun Finder
+        h1.denverFun Fun Finder
         form(method="post" action="/events")
     .container
       .login-create
@@ -23,9 +23,9 @@ block content
         .form
           form(method="get" action="/events")
             .row
-              .label City 
+              .labelCity City / State
                 label(for='city')
-                .inout
+                .input
                   input(type='text' id='city' name='city')
               .category(style='background-image: url(/images/outdoors.jpeg); background-size: cover;')
                 .label

@@ -61,10 +61,10 @@ h1 {
 }
 
 .container .login-create {
-  /*padding-top: -400px;*/
-  margin-top: -100px;
-  display: inline-block;
-  position: absolute;
+  margin-top: -90px;
+  margin-left: 70px;
+  position: relative;
+  display: block;
 }
 
 
@@ -329,13 +329,21 @@ h1 span {
   /*padding-bottom: 500px;*/
   position: relative;
   bottom: 50px;
+  color: #0000CC;
 }
 
 .back {
   padding-left: 20px;
   bottom: 20px;
+  color: #0000CC;
 }
 
 a {
-  color: #2176FF;
+  color: #0000CC;
+}
+
+.labelCity .input {
+  position: relative;
+  padding-bottom: 30px;
+  font-size: 28px;
 }
