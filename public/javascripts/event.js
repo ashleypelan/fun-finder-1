@@ -39,12 +39,11 @@ var randomizer = function (events, len) {
     website.innerHTML = specificEvent.titles[randomEvent];
     // mainImage.style = 'background-image:' + specificEvent.mainImage[randomEvent].medium.url + ';';
 
-
+    console.log(events[randomInterest].name);
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
-                time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]};
 
-            time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]
-            category: specificEvent[randomInterest].name};
+            time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
+            category: events[randomInterest].name};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);
