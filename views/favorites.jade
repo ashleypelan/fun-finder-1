@@ -1,0 +1,53 @@
+extends layout
+
+block content
+  .fav-content
+    h1 Fun Finder
+    .fav.columns-8
+      h2 Username's Saved Events
+      
+      //- for val in favorites
+      .fav-row
+        .columns-2
+          p Nightlife
+          p May 4, 2015
+        .columns-10
+          h4 
+            a(href='') Title
+          p.start-time When:
+            br
+            | Where:
+            button(id='delete') Delete Event
+      .fav-row
+        .columns-2
+          p Family
+          p May 4, 2015
+        .columns-10.inner
+          h4 
+            a(href='') Title
+          p.start-time When:
+              br
+              | Where:
+              button(id='delete') Delete Event
+      .fav-row
+        .columns-2
+          p Nightlife
+          p May 4, 2015
+        .columns-10
+          h4 
+            a(href='') Title
+          p.start-time When:
+            br
+            | Where:
+            button(id='delete') Delete Event
+          
+    .fav.columns-4
+      p.num-favs You have x saved events in Denver Fun Finder.
+      button(id='save-fav') 
+        a(href='/') Find More Events
+        
+                 
+        
+        
+        
+//
