@@ -42,7 +42,8 @@ var randomizer = function (events, len) {
 
 
     favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
-                time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]};
+            time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent]
+            category: specificEvent[randomInterest].name};
     // Google Maps
     function initialize() {
       var myLatlng = new google.maps.LatLng(latitude.innerHTML,longitude.innerHTML);
