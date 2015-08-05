@@ -1,0 +1,24 @@
+extends ../layout
+
+block content
+  header
+    .container
+      .title
+        h1 Denver Fun Finder
+      if user
+        a(href="/") Go Explore!
+        p
+        a(href="/logout") Logout
+      
+  main
+    .container
+      each event in profile
+        .new-event
+          p=event.title
+            ul
+              li=event.time
+              li=event.address
+              li=event.description
+            .remove-event
+              form(action="/remove/" + event._id, method="post")
+                input(type="submit" value="Remove From Favorites")

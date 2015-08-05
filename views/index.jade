@@ -9,7 +9,9 @@ block content
     .container
       .login-create
         if user
-          p Hello, #{user}
+          p Hello, #{user.username}
+          a(href="/profile") My Profile!
+          p
           a(href="/logout") Logout
         else
           .login
@@ -21,6 +23,10 @@ block content
         .form
           form(method="get" action="/events")
             .row
+              .label City 
+                label(for='city')
+                .inout
+                  input(type='text' id='city' name='city')
               .category(style='background-image: url(/images/outdoors.jpeg); background-size: cover;')
                 .label
                   label(for="outdoors") Outdoors

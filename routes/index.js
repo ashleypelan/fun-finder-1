@@ -6,8 +6,14 @@ var mongo = require('../lib/javascripts/mongo.js');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
+  if(req.session.username){
+    mongo.findMe(req).then(function(user){
+      res.render('index', {user: user});
+    })
+  } else {
+    res.render('index');
+  }
 
-  res.render('index', {user: req.session.username});
 });
 
 router.post('/favorites', function(req, res, next){
@@ -16,10 +22,10 @@ router.post('/favorites', function(req, res, next){
 })
 // Events Page
 router.get('/events', function (req, res, next) {
-  console.log(req.query);
+
   categorize.apiCall(JSON.stringify(req.query), function (info) {
     // console.log(info);
-    res.render('events', {events: JSON.stringify(info)});
+    res.render('events', {events: JSON.stringify(info), user: req.session.username});
   });
 });
 
@@ -78,5 +84,28 @@ router.post('/create-account', function(req, res, next) {
     res.render('funfinder/create-account', {errors: errors, data: req.body})
   }
 });
+
+router.get('/profile', function(req, res, next) {
+    if(req.session.username){
+
+      mongo.findEvents().then(function(events){
+        mongo.findMe(req).then(function(profile){
+          mongo.findMeInEvents(profile).then(function(profile){
+            console.log(profile);
+            res.render('funfinder/profile', {user: req.session.username, profile: profile, events: events})
+          })
+        });
+      })
+    } else {
+      res.redirect('/');
+    }
+})
+
+router.post('/remove/:id', function(req, res, next){
+  mongo.removeFavorite(req).then(function(){
+    res.redirect('/profile')
+  })
+})
+
 
 module.exports = router;
