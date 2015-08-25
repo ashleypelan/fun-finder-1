@@ -41,9 +41,9 @@ var randomizer = function (events, len) {
     var category = events[randomInterest].name.charAt(0).toUpperCase() + events[randomInterest].name.slice(1);
     // mainImage.style = 'background-image:' + specificEvent.mainImage[randomEvent].medium.url + ';';
 
-    console.log(specificEvent.website[randomEvent]);
+    console.log(typeof specificEvent.website[randomEvent]);
     console.log(specificEvent.venueAddress[randomEvent])
-    favs = {title: specificEvent.titles[randomEvent], description: specificEvent.description[randomEvent],
+    favs = {title: specificEvent.titles[randomEvent], description:   specificEvent.description[randomEvent].replace("http://","" ).replace("www", ""),
             time: specificEvent.startTime[randomEvent], address: specificEvent.venueAddress[randomEvent],
             category: category};
     // Google Maps
@@ -62,12 +62,13 @@ var randomizer = function (events, len) {
           title: 'Hello World!'
       });
     }
+    console.log(duplicateCheck.length)
     if(duplicateCheck.length === 1) {
       google.maps.event.addDomListener(window, 'load', initialize);
       return favs;
     } else {
       google.maps.event.addDomListener(exploreButton, 'click', initialize);
-      return favs;
+      return favs
     }
 
   } else  {
@@ -79,6 +80,8 @@ var randomizer = function (events, len) {
 
 randomizer(events, len);
 
+
 exploreButton.addEventListener('click', function () {
   randomizer(events, len);
+
 });

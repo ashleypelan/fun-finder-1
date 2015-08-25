@@ -18,6 +18,8 @@ block content
       p
       if user
         a#view-all(href='/favorites') View all your saved events.
+      else 
+        a#view-all(href="/login") Please login to save favorites.
       #map-canvas
       p.venue-address.event-address 
         br

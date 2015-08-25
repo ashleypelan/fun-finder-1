@@ -2,6 +2,7 @@ if(document.getElementById('save-fav')) {
   var favorites = document.getElementById('save-fav');
   favorites.addEventListener("click", function() {
     var data = 'data=' + JSON.stringify(favs);
+    console.log(data + "*********************");
     var xhr = new XMLHttpRequest;
     xhr.open('post', '/favorites', true);
     xhr.addEventListener('load', function () {
