@@ -1,3 +1,3 @@
 .env
 node_modules
-/javascripts/google_analytics.js
+/public/javascripts/google_analytics.js
